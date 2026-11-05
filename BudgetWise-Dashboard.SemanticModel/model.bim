@@ -1,0 +1,282 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "File/raw_data_budgetwise_finance_dataset_csv",
+        "connectionDetails": {
+          "protocol": "file",
+          "address": {
+            "path": "raw_data/budgetwise_finance_dataset.csv"
+          },
+          "authentication": null,
+          "query": null
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "budgetwise_finance_dataset",
+        "columns": [
+          {
+            "name": "transaction_id",
+            "dataType": "string",
+            "sourceColumn": "transaction_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "user_id",
+            "dataType": "string",
+            "sourceColumn": "user_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "date",
+            "dataType": "dateTime",
+            "sourceColumn": "date",
+            "formatString": "yyyy-MM-dd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "transaction_type",
+            "dataType": "string",
+            "sourceColumn": "transaction_type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "category",
+            "dataType": "string",
+            "sourceColumn": "category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "amount",
+            "dataType": "int64",
+            "sourceColumn": "amount",
+            "formatString": "$#,##0",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "payment_mode",
+            "dataType": "string",
+            "sourceColumn": "payment_mode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "location",
+            "dataType": "string",
+            "sourceColumn": "location",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "notes",
+            "dataType": "string",
+            "sourceColumn": "notes",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month Year",
+            "dataType": "string",
+            "type": "calculated",
+            "expression": "FORMAT('budgetwise_finance_dataset'[date], \"MMM yyyy\")",
+            "sortByColumn": "Month Year Sort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month Year Sort",
+            "dataType": "int64",
+            "type": "calculated",
+            "expression": "YEAR('budgetwise_finance_dataset'[date]) * 100 + MONTH('budgetwise_finance_dataset'[date])",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Day Type",
+            "dataType": "string",
+            "type": "calculated",
+            "expression": "IF(WEEKDAY('budgetwise_finance_dataset'[date], 2) >= 6, \"Weekend\", \"Weekday\")",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Day Name",
+            "dataType": "string",
+            "type": "calculated",
+            "expression": "FORMAT('budgetwise_finance_dataset'[date], \"dddd\")",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "budgetwise_finance_dataset-Partition",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"raw_data/budgetwise_finance_dataset.csv\"),[Delimiter=\",\", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Trimmed Text\" = Table.TransformColumns(#\"Promoted Headers\",{{\"transaction_id\", Text.Trim, type text}}),",
+                "    #\"Cleaned Text\" = Table.TransformColumns(#\"Trimmed Text\",{{\"transaction_id\", Text.Clean, type text}}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Cleaned Text\", {\"transaction_id\"}),",
+                "    #\"Changed Type Date\" = Table.TransformColumnTypes(#\"Removed Duplicates\",{{\"date\", type date}}),",
+                "    #\"Lowercased Text\" = Table.TransformColumns(#\"Changed Type Date\",{",
+                "        {\"transaction_type\", Text.Lower, type text},",
+                "        {\"category\", Text.Lower, type text},",
+                "        {\"payment_mode\", Text.Lower, type text},",
+                "        {\"location\", Text.Lower, type text},",
+                "        {\"notes\", Text.Lower, type text}",
+                "    }),",
+                "    #\"Normalized Categories\" = Table.ReplaceValue(#\"Lowercased Text\",\"educaton\",\"education\",Replacer.ReplaceText,{\"category\"}),",
+                "    #\"Normalized Food 1\" = Table.ReplaceValue(#\"Normalized Categories\",\"foodd\",\"food\",Replacer.ReplaceText,{\"category\"}),",
+                "    #\"Normalized Food 2\" = Table.ReplaceValue(#\"Normalized Food 1\",\"fod\",\"food\",Replacer.ReplaceText,{\"category\"}),",
+                "    #\"Normalized Food 3\" = Table.ReplaceValue(#\"Normalized Food 2\",\"foods\",\"food\",Replacer.ReplaceText,{\"category\"}),",
+                "    #\"Normalized Rent 1\" = Table.ReplaceValue(#\"Normalized Food 3\",\"rentt\",\"rent\",Replacer.ReplaceText,{\"category\"}),",
+                "    #\"Normalized Rent 2\" = Table.ReplaceValue(#\"Normalized Rent 1\",\"rnt\",\"rent\",Replacer.ReplaceText,{\"category\"}),",
+                "    #\"Normalized Travel\" = Table.ReplaceValue(#\"Normalized Rent 2\",\"traval\",\"travel\",Replacer.ReplaceText,{\"category\"}),",
+                "    #\"Normalized Utilities\" = Table.ReplaceValue(#\"Normalized Travel\",\"utilties\",\"utilities\",Replacer.ReplaceText,{\"category\"}),",
+                "    #\"Filtered Outliers\" = Table.SelectRows(#\"Normalized Utilities\", each ([amount] <> \"999999999\" and [amount] <> null)),",
+                "    #\"Changed Type Amount\" = Table.TransformColumnTypes(#\"Filtered Outliers\",{{\"amount\", Int64.Type}}),",
+                "    #\"Filtered Valid Dates\" = Table.SelectRows(#\"Changed Type Amount\", each [date] <> null)",
+                "in",
+                "    #\"Filtered Valid Dates\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total Spend",
+            "expression": "CALCULATE(SUM(budgetwise_finance_dataset[amount]), budgetwise_finance_dataset[transaction_type] = \"expense\")",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Weekend Tax",
+            "expression": "CALCULATE([Total Spend], WEEKDAY(budgetwise_finance_dataset[date], 2) IN {6, 7}, budgetwise_finance_dataset[notes] IN {\"movie tickets\", \"shopping\"} || (budgetwise_finance_dataset[category] IN {\"entertainment\", \"entertain\", \"entrtnmnt\"} && NOT(budgetwise_finance_dataset[notes] IN {\"gym membership\", \"online course\", \"internet bill\", \"coffee\", \"restaurant dinner\", \"lunch\", \"uber ride\", \"test\", \"!!!\", \"xyz123\", \"asdfgh\", \"...\", \"misc\"})))",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Ghost Subscriptions",
+            "expression": "CALCULATE([Total Spend], budgetwise_finance_dataset[notes] IN {\"gym membership\", \"online course\", \"internet bill\"})",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Delivery Drain",
+            "expression": "CALCULATE([Total Spend], budgetwise_finance_dataset[notes] IN {\"coffee\", \"restaurant dinner\", \"lunch\", \"uber ride\"})",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Silent Creep",
+            "expression": "CALCULATE([Total Spend], budgetwise_finance_dataset[notes] IN {\"test\", \"!!!\", \"xyz123\", \"asdfgh\", \"...\", \"misc\"})",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Total Leak",
+            "expression": "[Weekend Tax] + [Ghost Subscriptions] + [Delivery Drain] + [Silent Creep]",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "6-month forecast",
+            "expression": "VAR MonthsCount = DISTINCTCOUNT(budgetwise_finance_dataset[Month Year Sort]) VAR MonthlyAvgLeak = DIVIDE([Total Leak], IF(MonthsCount = 0, 1, MonthsCount), 0) RETURN MonthlyAvgLeak * 6",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "6-Month Spend Forecast",
+            "expression": "VAR MonthsCount = DISTINCTCOUNT(budgetwise_finance_dataset[Month Year Sort]) VAR MonthlyAvgSpend = DIVIDE([Total Spend], IF(MonthsCount = 0, 1, MonthsCount), 0) RETURN MonthlyAvgSpend * 6",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Leak Percentage",
+            "expression": "DIVIDE([Total Leak], [Total Spend], 0)",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Annualized Leak",
+            "expression": "DIVIDE([Total Leak], 4, 0)",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Weekend vs Weekday Ratio",
+            "expression": "VAR WeekendSpend = CALCULATE([Total Spend], WEEKDAY(budgetwise_finance_dataset[date], 2) IN {6, 7}) VAR WeekdaySpend = CALCULATE([Total Spend], WEEKDAY(budgetwise_finance_dataset[date], 2) IN {1, 2, 3, 4, 5}) RETURN DIVIDE(WeekendSpend, WeekdaySpend, 0)",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Total Income",
+            "expression": "CALCULATE(SUM(budgetwise_finance_dataset[amount]), budgetwise_finance_dataset[transaction_type] = \"income\")",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Total Expenses",
+            "expression": "CALCULATE(SUM(budgetwise_finance_dataset[amount]), budgetwise_finance_dataset[transaction_type] = \"expense\")",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Net Balance",
+            "expression": "[Total Income] - [Total Expenses]",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Savings Rate",
+            "expression": "DIVIDE([Net Balance], [Total Income], 0)",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Total Transactions",
+            "expression": "DISTINCTCOUNT(budgetwise_finance_dataset[transaction_id])",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Total Users",
+            "expression": "DISTINCTCOUNT(budgetwise_finance_dataset[user_id])",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Average Transaction",
+            "expression": "AVERAGE(budgetwise_finance_dataset[amount])",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Average Expense",
+            "expression": "CALCULATE(AVERAGE(budgetwise_finance_dataset[amount]), budgetwise_finance_dataset[transaction_type] = \"expense\")",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Average Income",
+            "expression": "CALCULATE(AVERAGE(budgetwise_finance_dataset[amount]), budgetwise_finance_dataset[transaction_type] = \"income\")",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Average Spend per User",
+            "expression": "DIVIDE([Total Expenses], [Total Users], 0)",
+            "formatString": "$#,##0"
+          },
+          {
+            "name": "Transactions per User",
+            "expression": "DIVIDE([Total Transactions], [Total Users], 0)",
+            "formatString": "0.0"
+          },
+          {
+            "name": "Expense Transaction Count",
+            "expression": "CALCULATE([Total Transactions], budgetwise_finance_dataset[transaction_type] = \"expense\")",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Income Transaction Count",
+            "expression": "CALCULATE([Total Transactions], budgetwise_finance_dataset[transaction_type] = \"income\")",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Expense Percentage",
+            "expression": "DIVIDE([Total Expenses], [Total Income], 0)",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "High Value Transactions",
+            "expression": "CALCULATE([Total Transactions], budgetwise_finance_dataset[amount] >= 50000)",
+            "formatString": "#,##0"
+          }
+        ]
+      }
+    ]
+  }
+}
