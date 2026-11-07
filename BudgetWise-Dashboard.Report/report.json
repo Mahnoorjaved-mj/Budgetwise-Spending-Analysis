@@ -1,0 +1,379 @@
+{
+  "id": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "name": "SharedResources",
+        "type": 2,
+        "items": [
+          {
+            "type": 202,
+            "path": "BaseThemes/CY26SU05.json",
+            "name": "CY26SU05"
+          }
+        ],
+        "disabled": false
+      }
+    }
+  ],
+  "sections": [
+    {
+      "id": 0,
+      "name": "Section_Hero",
+      "displayName": "Hero",
+      "filters": "[]",
+      "ordinal": 0,
+      "width": 1280,
+      "height": 720,
+      "displayOption": 1,
+      "visualContainers": [
+        {
+          "x": 10,
+          "y": 10,
+          "z": 100,
+          "width": 920,
+          "height": 65,
+          "config": "{\"name\": \"71ea9416ebe5461bae0d\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 10, \"width\": 920, \"height\": 65, \"z\": 100, \"tabOrder\": 100}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 10, \"width\": 300, \"height\": 60, \"z\": 100, \"tabOrder\": 100}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"BudgetWise Forensic Audit | The $47,000 Leak\\n\", \"textStyle\": {\"fontFamily\": \"Segoe UI Semibold\", \"fontSize\": \"16pt\", \"fontWeight\": \"bold\", \"color\": \"#F8FAFC\"}}, {\"value\": \"Household Financial Waste, Invisible Behavioral Surcharges & Recurring Account Drain\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"color\": \"#94A3B8\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 940,
+          "y": 10,
+          "z": 300,
+          "width": 160,
+          "height": 65,
+          "config": "{\"name\": \"9712289ebed94b63b5fe\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 940, \"y\": 10, \"width\": 160, \"height\": 65, \"z\": 300, \"tabOrder\": 300}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 80, \"width\": 300, \"height\": 50, \"z\": 300, \"tabOrder\": 300}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"budgetwise_finance_dataset.user_id\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"user_id\"}, \"Name\": \"budgetwise_finance_dataset.user_id\", \"NativeReferenceName\": \"user_id\"}]}, \"drillFilterOtherVisuals\": true}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"user_id\"}, \"Name\": \"budgetwise_finance_dataset.user_id\", \"NativeReferenceName\": \"user_id\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Values\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"Select Household\", \"Name\": \"budgetwise_finance_dataset.user_id\", \"Type\": 1}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Values\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"Select Household\", \"queryName\": \"budgetwise_finance_dataset.user_id\", \"roles\": {\"Values\": true}, \"type\": {\"category\": null, \"underlyingType\": 1}, \"expr\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"user_id\"}}}]}"
+        },
+        {
+          "x": 1110,
+          "y": 10,
+          "z": 300,
+          "width": 160,
+          "height": 65,
+          "config": "{\"name\": \"55f88a1e4062407f856b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1110, \"y\": 10, \"width\": 160, \"height\": 65, \"z\": 300, \"tabOrder\": 300}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 140, \"width\": 300, \"height\": 50, \"z\": 300, \"tabOrder\": 300}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"budgetwise_finance_dataset.Month Year\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Month Year\"}, \"Name\": \"budgetwise_finance_dataset.Month Year\", \"NativeReferenceName\": \"Month Year\"}]}, \"drillFilterOtherVisuals\": true}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Month Year\"}, \"Name\": \"budgetwise_finance_dataset.Month Year\", \"NativeReferenceName\": \"Month Year\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Values\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"Select Period\", \"Name\": \"budgetwise_finance_dataset.Month Year\", \"Type\": 1}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Values\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"Select Period\", \"queryName\": \"budgetwise_finance_dataset.Month Year\", \"roles\": {\"Values\": true}, \"type\": {\"category\": null, \"underlyingType\": 1}, \"expr\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Month Year\"}}}]}"
+        },
+        {
+          "x": 10,
+          "y": 85,
+          "z": 200,
+          "width": 450,
+          "height": 175,
+          "config": "{\"name\": \"922a406e914f4ad6a311\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 85, \"width\": 450, \"height\": 175, \"z\": 200, \"tabOrder\": 200}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 200, \"width\": 300, \"height\": 130, \"z\": 200, \"tabOrder\": 200}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"budgetwise_finance_dataset.Total Leak\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Total Leak\"}, \"Name\": \"budgetwise_finance_dataset.Total Leak\", \"NativeReferenceName\": \"Total Leak\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Total Leak\"}}}]}, \"drillFilterOtherVisuals\": true, \"hasDefaultSort\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#F8FAFC\"}}, \"labelPrecision\": 0}}], \"categoryLabels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#94A3B8\"}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Total Leak\"}, \"Name\": \"budgetwise_finance_dataset.Total Leak\", \"NativeReferenceName\": \"Total Leak\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Data\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"THE $47,000 LEAK (TOTAL PORTFOLIO LEAKAGE)\", \"Name\": \"budgetwise_finance_dataset.Total Leak\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Data\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"THE $47,000 LEAK (TOTAL PORTFOLIO LEAKAGE)\", \"format\": \"$#,##0\", \"queryName\": \"budgetwise_finance_dataset.Total Leak\", \"roles\": {\"Data\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Total Leak\"}}}]}"
+        },
+        {
+          "x": 470,
+          "y": 85,
+          "z": 200,
+          "width": 395,
+          "height": 82,
+          "config": "{\"name\": \"e08c9c25a4264ab5b135\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 470, \"y\": 85, \"width\": 395, \"height\": 82, \"z\": 200, \"tabOrder\": 200}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 340, \"width\": 300, \"height\": 95, \"z\": 200, \"tabOrder\": 200}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"budgetwise_finance_dataset.Weekend Tax\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Weekend Tax\"}, \"Name\": \"budgetwise_finance_dataset.Weekend Tax\", \"NativeReferenceName\": \"Weekend Tax\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Weekend Tax\"}}}]}, \"drillFilterOtherVisuals\": true, \"hasDefaultSort\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#F8FAFC\"}}, \"labelPrecision\": 0}}], \"categoryLabels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#94A3B8\"}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Weekend Tax\"}, \"Name\": \"budgetwise_finance_dataset.Weekend Tax\", \"NativeReferenceName\": \"Weekend Tax\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Data\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"PILLAR 1: WEEKEND TAX (LEISURE SURCHARGE)\", \"Name\": \"budgetwise_finance_dataset.Weekend Tax\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Data\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"PILLAR 1: WEEKEND TAX (LEISURE SURCHARGE)\", \"format\": \"$#,##0\", \"queryName\": \"budgetwise_finance_dataset.Weekend Tax\", \"roles\": {\"Data\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Weekend Tax\"}}}]}"
+        },
+        {
+          "x": 875,
+          "y": 85,
+          "z": 200,
+          "width": 395,
+          "height": 82,
+          "config": "{\"name\": \"e437a85dc8424441a348\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 875, \"y\": 85, \"width\": 395, \"height\": 82, \"z\": 200, \"tabOrder\": 200}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 445, \"width\": 300, \"height\": 95, \"z\": 200, \"tabOrder\": 200}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"budgetwise_finance_dataset.Ghost Subscriptions\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Ghost Subscriptions\"}, \"Name\": \"budgetwise_finance_dataset.Ghost Subscriptions\", \"NativeReferenceName\": \"Ghost Subscriptions\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Ghost Subscriptions\"}}}]}, \"drillFilterOtherVisuals\": true, \"hasDefaultSort\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#F8FAFC\"}}, \"labelPrecision\": 0}}], \"categoryLabels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#94A3B8\"}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Ghost Subscriptions\"}, \"Name\": \"budgetwise_finance_dataset.Ghost Subscriptions\", \"NativeReferenceName\": \"Ghost Subscriptions\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Data\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"PILLAR 2: GHOST SUBSCRIPTIONS (RECURRING)\", \"Name\": \"budgetwise_finance_dataset.Ghost Subscriptions\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Data\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"PILLAR 2: GHOST SUBSCRIPTIONS (RECURRING)\", \"format\": \"$#,##0\", \"queryName\": \"budgetwise_finance_dataset.Ghost Subscriptions\", \"roles\": {\"Data\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Ghost Subscriptions\"}}}]}"
+        },
+        {
+          "x": 470,
+          "y": 178,
+          "z": 200,
+          "width": 395,
+          "height": 82,
+          "config": "{\"name\": \"4f46ac20f0dd47ba8456\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 470, \"y\": 178, \"width\": 395, \"height\": 82, \"z\": 200, \"tabOrder\": 200}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 550, \"width\": 300, \"height\": 95, \"z\": 200, \"tabOrder\": 200}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"budgetwise_finance_dataset.Delivery Drain\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Delivery Drain\"}, \"Name\": \"budgetwise_finance_dataset.Delivery Drain\", \"NativeReferenceName\": \"Delivery Drain\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Delivery Drain\"}}}]}, \"drillFilterOtherVisuals\": true, \"hasDefaultSort\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#F8FAFC\"}}, \"labelPrecision\": 0}}], \"categoryLabels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#94A3B8\"}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Delivery Drain\"}, \"Name\": \"budgetwise_finance_dataset.Delivery Drain\", \"NativeReferenceName\": \"Delivery Drain\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Data\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"PILLAR 3: DELIVERY DRAIN (TAKEOUT & RIDES)\", \"Name\": \"budgetwise_finance_dataset.Delivery Drain\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Data\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"PILLAR 3: DELIVERY DRAIN (TAKEOUT & RIDES)\", \"format\": \"$#,##0\", \"queryName\": \"budgetwise_finance_dataset.Delivery Drain\", \"roles\": {\"Data\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Delivery Drain\"}}}]}"
+        },
+        {
+          "x": 875,
+          "y": 178,
+          "z": 200,
+          "width": 395,
+          "height": 82,
+          "config": "{\"name\": \"2fdae03eaf19468885fb\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 875, \"y\": 178, \"width\": 395, \"height\": 82, \"z\": 200, \"tabOrder\": 200}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 655, \"width\": 300, \"height\": 95, \"z\": 200, \"tabOrder\": 200}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"budgetwise_finance_dataset.Silent Creep\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Silent Creep\"}, \"Name\": \"budgetwise_finance_dataset.Silent Creep\", \"NativeReferenceName\": \"Silent Creep\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Silent Creep\"}}}]}, \"drillFilterOtherVisuals\": true, \"hasDefaultSort\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#F8FAFC\"}}, \"labelPrecision\": 0}}], \"categoryLabels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#94A3B8\"}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Silent Creep\"}, \"Name\": \"budgetwise_finance_dataset.Silent Creep\", \"NativeReferenceName\": \"Silent Creep\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Data\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"PILLAR 4: SILENT CREEP (UNTRACKED LEAKS)\", \"Name\": \"budgetwise_finance_dataset.Silent Creep\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Data\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"PILLAR 4: SILENT CREEP (UNTRACKED LEAKS)\", \"format\": \"$#,##0\", \"queryName\": \"budgetwise_finance_dataset.Silent Creep\", \"roles\": {\"Data\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Silent Creep\"}}}]}"
+        },
+        {
+          "x": 10,
+          "y": 270,
+          "z": 200,
+          "width": 220,
+          "height": 100,
+          "config": "{\"name\": \"dae5c220142d4e0b883b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 270, \"width\": 220, \"height\": 100, \"z\": 200, \"tabOrder\": 200}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 760, \"width\": 145, \"height\": 85, \"z\": 200, \"tabOrder\": 200}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"budgetwise_finance_dataset.Total Spend\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Total Spend\"}, \"Name\": \"budgetwise_finance_dataset.Total Spend\", \"NativeReferenceName\": \"Total Spend\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Total Spend\"}}}]}, \"drillFilterOtherVisuals\": true, \"hasDefaultSort\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#F8FAFC\"}}, \"labelPrecision\": 0}}], \"categoryLabels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#94A3B8\"}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Total Spend\"}, \"Name\": \"budgetwise_finance_dataset.Total Spend\", \"NativeReferenceName\": \"Total Spend\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Data\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"TOTAL SPEND (GROSS OUTFLOW)\", \"Name\": \"budgetwise_finance_dataset.Total Spend\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Data\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"TOTAL SPEND (GROSS OUTFLOW)\", \"format\": \"$#,##0\", \"queryName\": \"budgetwise_finance_dataset.Total Spend\", \"roles\": {\"Data\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Total Spend\"}}}]}"
+        },
+        {
+          "x": 240,
+          "y": 270,
+          "z": 200,
+          "width": 220,
+          "height": 100,
+          "config": "{\"name\": \"89e36e1d130a4d2487b5\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 240, \"y\": 270, \"width\": 220, \"height\": 100, \"z\": 200, \"tabOrder\": 200}}, {\"id\": 1, \"position\": {\"x\": 165, \"y\": 760, \"width\": 145, \"height\": 85, \"z\": 200, \"tabOrder\": 200}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"budgetwise_finance_dataset.Leak Percentage\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Leak Percentage\"}, \"Name\": \"budgetwise_finance_dataset.Leak Percentage\", \"NativeReferenceName\": \"Leak Percentage\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Leak Percentage\"}}}]}, \"drillFilterOtherVisuals\": true, \"hasDefaultSort\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#F8FAFC\"}}, \"labelPrecision\": 0}}], \"categoryLabels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#94A3B8\"}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Leak Percentage\"}, \"Name\": \"budgetwise_finance_dataset.Leak Percentage\", \"NativeReferenceName\": \"Leak Percentage\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Data\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"LEAKAGE RATE (% OF SPEND)\", \"Name\": \"budgetwise_finance_dataset.Leak Percentage\", \"Type\": 3, \"Format\": \"0.0%\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Data\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"LEAKAGE RATE (% OF SPEND)\", \"format\": \"0.0%\", \"queryName\": \"budgetwise_finance_dataset.Leak Percentage\", \"roles\": {\"Data\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Leak Percentage\"}}}]}"
+        },
+        {
+          "x": 470,
+          "y": 270,
+          "z": 400,
+          "width": 395,
+          "height": 435,
+          "config": "{\"name\": \"6e4caa9abe75438e817c\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 470, \"y\": 270, \"width\": 395, \"height\": 435, \"z\": 400, \"tabOrder\": 400}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 855, \"width\": 300, \"height\": 260, \"z\": 400, \"tabOrder\": 400}}], \"singleVisual\": {\"visualType\": \"donutChart\", \"projections\": {\"Category\": [{\"queryRef\": \"budgetwise_finance_dataset.category\", \"active\": true}], \"Y\": [{\"queryRef\": \"Sum(budgetwise_finance_dataset.amount)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"category\"}, \"Name\": \"budgetwise_finance_dataset.category\", \"NativeReferenceName\": \"category\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}, \"drillFilterOtherVisuals\": true}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"category\"}, \"Name\": \"budgetwise_finance_dataset.category\", \"NativeReferenceName\": \"category\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"category\", \"Name\": \"budgetwise_finance_dataset.category\", \"Type\": 1}, {\"Restatement\": \"Sum of amount\", \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Category\", \"Projection\": 0, \"isActive\": false}, {\"Name\": \"Y\", \"Projection\": 1, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"category\", \"queryName\": \"budgetwise_finance_dataset.category\", \"roles\": {\"Category\": true}, \"type\": {\"category\": null, \"underlyingType\": 1}, \"expr\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"category\"}}}, {\"displayName\": \"Sum of amount\", \"format\": \"$#,##0\", \"queryName\": \"Sum(budgetwise_finance_dataset.amount)\", \"roles\": {\"Y\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}"
+        },
+        {
+          "x": 875,
+          "y": 270,
+          "z": 450,
+          "width": 395,
+          "height": 435,
+          "config": "{\"name\": \"8ba77e5046714f358072\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 875, \"y\": 270, \"width\": 395, \"height\": 435, \"z\": 450, \"tabOrder\": 450}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 1125, \"width\": 300, \"height\": 260, \"z\": 450, \"tabOrder\": 450}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"budgetwise_finance_dataset.Month Year\", \"active\": true}], \"Y\": [{\"queryRef\": \"Sum(budgetwise_finance_dataset.amount)\"}], \"Tooltips\": [{\"queryRef\": \"Sum(budgetwise_finance_dataset.Month Year Sort)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Month Year\"}, \"Name\": \"budgetwise_finance_dataset.Month Year\", \"NativeReferenceName\": \"Month Year\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Month Year Sort\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.Month Year Sort)\", \"NativeReferenceName\": \"Sum of Month Year Sort\"}]}, \"drillFilterOtherVisuals\": true}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Month Year\"}, \"Name\": \"budgetwise_finance_dataset.Month Year\", \"NativeReferenceName\": \"Month Year\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"Month Year\", \"Name\": \"budgetwise_finance_dataset.Month Year\", \"Type\": 1}, {\"Restatement\": \"Sum of amount\", \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Category\", \"Projection\": 0, \"isActive\": false}, {\"Name\": \"Y\", \"Projection\": 1, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"Month Year\", \"queryName\": \"budgetwise_finance_dataset.Month Year\", \"roles\": {\"Category\": true}, \"type\": {\"category\": null, \"underlyingType\": 1}, \"expr\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Month Year\"}}}, {\"displayName\": \"Sum of amount\", \"format\": \"$#,##0\", \"queryName\": \"Sum(budgetwise_finance_dataset.amount)\", \"roles\": {\"Y\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}"
+        },
+        {
+          "x": 10,
+          "y": 380,
+          "z": 100,
+          "width": 450,
+          "height": 325,
+          "config": "{\"name\": \"723184600b0a4fe5801c\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 380, \"width\": 450, \"height\": 325, \"z\": 100, \"tabOrder\": 100}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 1395, \"width\": 300, \"height\": 160, \"z\": 100, \"tabOrder\": 100}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Forensic Insight Summary\\n\", \"textStyle\": {\"fontFamily\": \"Segoe UI Semibold\", \"fontSize\": \"13pt\", \"fontWeight\": \"bold\", \"color\": \"#F8FAFC\"}}, {\"value\": \"Across 150 tracked households, unmonitored behavioral friction and convenience premiums account for over 45% of total discretionary outflows. Slicing by user highlights how spotlight households bleed over $47,000 annually.\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"color\": \"#94A3B8\"}}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Section_Evidence",
+      "displayName": "Evidence",
+      "filters": "[]",
+      "ordinal": 1,
+      "width": 1280,
+      "height": 720,
+      "displayOption": 1,
+      "visualContainers": [
+        {
+          "x": 10,
+          "y": 10,
+          "z": 100,
+          "width": 1260,
+          "height": 65,
+          "config": "{\"name\": \"96d89af2c1de49278bb3\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 10, \"width\": 1260, \"height\": 65, \"z\": 100, \"tabOrder\": 100}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 10, \"width\": 300, \"height\": 60, \"z\": 100, \"tabOrder\": 100}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Forensic Evidence & Behavioral Diagnostics\\n\", \"textStyle\": {\"fontFamily\": \"Segoe UI Semibold\", \"fontSize\": \"16pt\", \"fontWeight\": \"bold\", \"color\": \"#F8FAFC\"}}, {\"value\": \"Detailed Proof of Category Outflows, Chronological Acceleration, and Weekend Spikes\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"color\": \"#94A3B8\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 85,
+          "z": 400,
+          "width": 410,
+          "height": 620,
+          "config": "{\"name\": \"0b6f146bc85649c4bef7\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 85, \"width\": 410, \"height\": 620, \"z\": 400, \"tabOrder\": 400}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 80, \"width\": 300, \"height\": 300, \"z\": 400, \"tabOrder\": 400}}], \"singleVisual\": {\"visualType\": \"donutChart\", \"projections\": {\"Category\": [{\"queryRef\": \"budgetwise_finance_dataset.category\", \"active\": true}], \"Y\": [{\"queryRef\": \"Sum(budgetwise_finance_dataset.amount)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"category\"}, \"Name\": \"budgetwise_finance_dataset.category\", \"NativeReferenceName\": \"category\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}, \"drillFilterOtherVisuals\": true}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"category\"}, \"Name\": \"budgetwise_finance_dataset.category\", \"NativeReferenceName\": \"category\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"category\", \"Name\": \"budgetwise_finance_dataset.category\", \"Type\": 1}, {\"Restatement\": \"Sum of amount\", \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Category\", \"Projection\": 0, \"isActive\": false}, {\"Name\": \"Y\", \"Projection\": 1, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"category\", \"queryName\": \"budgetwise_finance_dataset.category\", \"roles\": {\"Category\": true}, \"type\": {\"category\": null, \"underlyingType\": 1}, \"expr\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"category\"}}}, {\"displayName\": \"Sum of amount\", \"format\": \"$#,##0\", \"queryName\": \"Sum(budgetwise_finance_dataset.amount)\", \"roles\": {\"Y\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}"
+        },
+        {
+          "x": 430,
+          "y": 85,
+          "z": 450,
+          "width": 460,
+          "height": 620,
+          "config": "{\"name\": \"864374613fba465b980a\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 430, \"y\": 85, \"width\": 460, \"height\": 620, \"z\": 450, \"tabOrder\": 450}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 390, \"width\": 300, \"height\": 300, \"z\": 450, \"tabOrder\": 450}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"budgetwise_finance_dataset.Month Year\", \"active\": true}], \"Y\": [{\"queryRef\": \"Sum(budgetwise_finance_dataset.amount)\"}], \"Tooltips\": [{\"queryRef\": \"Sum(budgetwise_finance_dataset.Month Year Sort)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Month Year\"}, \"Name\": \"budgetwise_finance_dataset.Month Year\", \"NativeReferenceName\": \"Month Year\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Month Year Sort\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.Month Year Sort)\", \"NativeReferenceName\": \"Sum of Month Year Sort\"}]}, \"drillFilterOtherVisuals\": true}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Month Year\"}, \"Name\": \"budgetwise_finance_dataset.Month Year\", \"NativeReferenceName\": \"Month Year\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"Month Year\", \"Name\": \"budgetwise_finance_dataset.Month Year\", \"Type\": 1}, {\"Restatement\": \"Sum of amount\", \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Category\", \"Projection\": 0, \"isActive\": false}, {\"Name\": \"Y\", \"Projection\": 1, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"Month Year\", \"queryName\": \"budgetwise_finance_dataset.Month Year\", \"roles\": {\"Category\": true}, \"type\": {\"category\": null, \"underlyingType\": 1}, \"expr\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Month Year\"}}}, {\"displayName\": \"Sum of amount\", \"format\": \"$#,##0\", \"queryName\": \"Sum(budgetwise_finance_dataset.amount)\", \"roles\": {\"Y\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}"
+        },
+        {
+          "x": 900,
+          "y": 85,
+          "z": 500,
+          "width": 370,
+          "height": 300,
+          "config": "{\"name\": \"c60aab84a8864962b984\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 900, \"y\": 85, \"width\": 370, \"height\": 300, \"z\": 500, \"tabOrder\": 500}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 700, \"width\": 300, \"height\": 260, \"z\": 500, \"tabOrder\": 500}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"budgetwise_finance_dataset.Day Type\", \"active\": true}], \"Y\": [{\"queryRef\": \"Sum(budgetwise_finance_dataset.amount)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Day Type\"}, \"Name\": \"budgetwise_finance_dataset.Day Type\", \"NativeReferenceName\": \"Day Type\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}, \"drillFilterOtherVisuals\": true}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Day Type\"}, \"Name\": \"budgetwise_finance_dataset.Day Type\", \"NativeReferenceName\": \"Day Type\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"Day Type\", \"Name\": \"budgetwise_finance_dataset.Day Type\", \"Type\": 1}, {\"Restatement\": \"Sum of amount\", \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Category\", \"Projection\": 0, \"isActive\": false}, {\"Name\": \"Y\", \"Projection\": 1, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"Day Type\", \"queryName\": \"budgetwise_finance_dataset.Day Type\", \"roles\": {\"Category\": true}, \"type\": {\"category\": null, \"underlyingType\": 1}, \"expr\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Day Type\"}}}, {\"displayName\": \"Sum of amount\", \"format\": \"$#,##0\", \"queryName\": \"Sum(budgetwise_finance_dataset.amount)\", \"roles\": {\"Y\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}"
+        },
+        {
+          "x": 900,
+          "y": 395,
+          "z": 500,
+          "width": 370,
+          "height": 310,
+          "config": "{\"name\": \"ba42a5d4c83a427dba40\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 900, \"y\": 395, \"width\": 370, \"height\": 310, \"z\": 500, \"tabOrder\": 500}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 970, \"width\": 300, \"height\": 260, \"z\": 500, \"tabOrder\": 500}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"budgetwise_finance_dataset.Day Name\", \"active\": true}], \"Y\": [{\"queryRef\": \"Sum(budgetwise_finance_dataset.amount)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Day Name\"}, \"Name\": \"budgetwise_finance_dataset.Day Name\", \"NativeReferenceName\": \"Day Name\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}, \"drillFilterOtherVisuals\": true}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Day Name\"}, \"Name\": \"budgetwise_finance_dataset.Day Name\", \"NativeReferenceName\": \"Day Name\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"Day Name\", \"Name\": \"budgetwise_finance_dataset.Day Name\", \"Type\": 1}, {\"Restatement\": \"Sum of amount\", \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Category\", \"Projection\": 0, \"isActive\": false}, {\"Name\": \"Y\", \"Projection\": 1, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"Day Name\", \"queryName\": \"budgetwise_finance_dataset.Day Name\", \"roles\": {\"Category\": true}, \"type\": {\"category\": null, \"underlyingType\": 1}, \"expr\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Day Name\"}}}, {\"displayName\": \"Sum of amount\", \"format\": \"$#,##0\", \"queryName\": \"Sum(budgetwise_finance_dataset.amount)\", \"roles\": {\"Y\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Section_Forecast",
+      "displayName": "Forecast",
+      "filters": "[]",
+      "ordinal": 2,
+      "width": 1280,
+      "height": 720,
+      "displayOption": 1,
+      "visualContainers": [
+        {
+          "x": 10,
+          "y": 10,
+          "z": 100,
+          "width": 1260,
+          "height": 65,
+          "config": "{\"name\": \"eac11f41795c485582c2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 10, \"width\": 1260, \"height\": 65, \"z\": 100, \"tabOrder\": 100}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 10, \"width\": 300, \"height\": 60, \"z\": 100, \"tabOrder\": 100}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"6-Month Predictive Run-Rate & Risk Trajectory\\n\", \"textStyle\": {\"fontFamily\": \"Segoe UI Semibold\", \"fontSize\": \"16pt\", \"fontWeight\": \"bold\", \"color\": \"#F8FAFC\"}}, {\"value\": \"Quantifying the Immediate Financial Cost of Inaction Over the Next Two Quarters\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"color\": \"#94A3B8\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 85,
+          "z": 200,
+          "width": 620,
+          "height": 140,
+          "config": "{\"name\": \"8b1998f298c343e2a367\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 85, \"width\": 620, \"height\": 140, \"z\": 200, \"tabOrder\": 200}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 80, \"width\": 300, \"height\": 110, \"z\": 200, \"tabOrder\": 200}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"budgetwise_finance_dataset.6-month forecast\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"6-month forecast\"}, \"Name\": \"budgetwise_finance_dataset.6-month forecast\", \"NativeReferenceName\": \"6-month forecast\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"6-month forecast\"}}}]}, \"drillFilterOtherVisuals\": true, \"hasDefaultSort\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#F8FAFC\"}}, \"labelPrecision\": 0}}], \"categoryLabels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#94A3B8\"}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"6-month forecast\"}, \"Name\": \"budgetwise_finance_dataset.6-month forecast\", \"NativeReferenceName\": \"6-month forecast\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Data\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"PROJECTED 6-MONTH LEAKAGE RUN-RATE\", \"Name\": \"budgetwise_finance_dataset.6-month forecast\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Data\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"PROJECTED 6-MONTH LEAKAGE RUN-RATE\", \"format\": \"$#,##0\", \"queryName\": \"budgetwise_finance_dataset.6-month forecast\", \"roles\": {\"Data\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"6-month forecast\"}}}]}"
+        },
+        {
+          "x": 640,
+          "y": 85,
+          "z": 200,
+          "width": 630,
+          "height": 140,
+          "config": "{\"name\": \"834c863f4299487883e3\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 640, \"y\": 85, \"width\": 630, \"height\": 140, \"z\": 200, \"tabOrder\": 200}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 200, \"width\": 300, \"height\": 110, \"z\": 200, \"tabOrder\": 200}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"budgetwise_finance_dataset.6-Month Spend Forecast\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"6-Month Spend Forecast\"}, \"Name\": \"budgetwise_finance_dataset.6-Month Spend Forecast\", \"NativeReferenceName\": \"6-Month Spend Forecast\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"6-Month Spend Forecast\"}}}]}, \"drillFilterOtherVisuals\": true, \"hasDefaultSort\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#F8FAFC\"}}, \"labelPrecision\": 0}}], \"categoryLabels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#94A3B8\"}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"6-Month Spend Forecast\"}, \"Name\": \"budgetwise_finance_dataset.6-Month Spend Forecast\", \"NativeReferenceName\": \"6-Month Spend Forecast\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Data\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"PROJECTED 6-MONTH TOTAL SPEND OUTFLOW\", \"Name\": \"budgetwise_finance_dataset.6-Month Spend Forecast\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Data\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"PROJECTED 6-MONTH TOTAL SPEND OUTFLOW\", \"format\": \"$#,##0\", \"queryName\": \"budgetwise_finance_dataset.6-Month Spend Forecast\", \"roles\": {\"Data\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"6-Month Spend Forecast\"}}}]}"
+        },
+        {
+          "x": 10,
+          "y": 235,
+          "z": 450,
+          "width": 850,
+          "height": 470,
+          "config": "{\"name\": \"d7569a9ce2714e0c9089\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 235, \"width\": 850, \"height\": 470, \"z\": 450, \"tabOrder\": 450}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 320, \"width\": 300, \"height\": 320, \"z\": 450, \"tabOrder\": 450}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"budgetwise_finance_dataset.Month Year\", \"active\": true}], \"Y\": [{\"queryRef\": \"Sum(budgetwise_finance_dataset.amount)\"}], \"Tooltips\": [{\"queryRef\": \"Sum(budgetwise_finance_dataset.Month Year Sort)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Month Year\"}, \"Name\": \"budgetwise_finance_dataset.Month Year\", \"NativeReferenceName\": \"Month Year\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Month Year Sort\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.Month Year Sort)\", \"NativeReferenceName\": \"Sum of Month Year Sort\"}]}, \"drillFilterOtherVisuals\": true}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Month Year\"}, \"Name\": \"budgetwise_finance_dataset.Month Year\", \"NativeReferenceName\": \"Month Year\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"amount\"}}, \"Function\": 0}, \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"NativeReferenceName\": \"Sum of amount\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"Month Year\", \"Name\": \"budgetwise_finance_dataset.Month Year\", \"Type\": 1}, {\"Restatement\": \"Sum of amount\", \"Name\": \"Sum(budgetwise_finance_dataset.amount)\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Category\", \"Projection\": 0, \"isActive\": false}, {\"Name\": \"Y\", \"Projection\": 1, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"Month Year\", \"queryName\": \"budgetwise_finance_dataset.Month Year\", \"roles\": {\"Category\": true}, \"type\": {\"category\": null, \"underlyingType\": 1}, \"expr\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Month Year\"}}}, {\"displayName\": \"Sum of amount\", \"format\": \"$#,##0\", \"queryName\": \"Sum(budgetwise_finance_dataset.amount)\", \"roles\": {\"Y\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"amount\"}}, \"Function\": 0}}}]}"
+        },
+        {
+          "x": 870,
+          "y": 235,
+          "z": 100,
+          "width": 400,
+          "height": 470,
+          "config": "{\"name\": \"f311e782422e451f8bd2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 870, \"y\": 235, \"width\": 400, \"height\": 470, \"z\": 100, \"tabOrder\": 100}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 650, \"width\": 300, \"height\": 240, \"z\": 100, \"tabOrder\": 100}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Predictive Impact Assessment\\n\", \"textStyle\": {\"fontFamily\": \"Segoe UI Semibold\", \"fontSize\": \"14pt\", \"fontWeight\": \"bold\", \"color\": \"#F8FAFC\"}}, {\"value\": \"Without proactive intervention, the identified 4 leak vectors will drain an additional $6.5M across the cohort ($23,500 per typical household) within 180 days.\\n\\n\\u2022 Delivery Drain is compounding at 8.4% annualized rate.\\n\\u2022 Ghost Subscriptions auto-renew indefinitely unless actively severed.\\n\\u2022 Weekend premium drift accelerates during holiday quarters.\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"11pt\", \"color\": \"#94A3B8\"}}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Section_Recommendations",
+      "displayName": "Recommendations",
+      "filters": "[]",
+      "ordinal": 3,
+      "width": 1280,
+      "height": 720,
+      "displayOption": 1,
+      "visualContainers": [
+        {
+          "x": 10,
+          "y": 10,
+          "z": 100,
+          "width": 1260,
+          "height": 65,
+          "config": "{\"name\": \"8861f22f2c554bc587d4\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 10, \"width\": 1260, \"height\": 65, \"z\": 100, \"tabOrder\": 100}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 10, \"width\": 300, \"height\": 60, \"z\": 100, \"tabOrder\": 100}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Strategic Playbook & Leak Recovery Plan\\n\", \"textStyle\": {\"fontFamily\": \"Segoe UI Semibold\", \"fontSize\": \"16pt\", \"fontWeight\": \"bold\", \"color\": \"#F8FAFC\"}}, {\"value\": \"Targeted Interventions to Plug Each Leak Pillar and Reclaim $47,000+ per Household\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"color\": \"#94A3B8\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 85,
+          "z": 100,
+          "width": 620,
+          "height": 170,
+          "config": "{\"name\": \"dca68f0924664999936c\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 85, \"width\": 620, \"height\": 170, \"z\": 100, \"tabOrder\": 100}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 80, \"width\": 300, \"height\": 150, \"z\": 100, \"tabOrder\": 100}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Pillar 1: Plug the Weekend Tax\\n\", \"textStyle\": {\"fontFamily\": \"Segoe UI Semibold\", \"fontSize\": \"14pt\", \"fontWeight\": \"bold\", \"color\": \"#F8FAFC\"}}, {\"value\": \"Action: Establish a strict $150 weekend dining/leisure allowance and plan Friday dinners ahead of time.\\n\\nProjected Household Savings: ~$1,950 / year\\nImplementation Ease: High (Immediate rule-based control)\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"color\": \"#94A3B8\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 640,
+          "y": 85,
+          "z": 100,
+          "width": 630,
+          "height": 170,
+          "config": "{\"name\": \"86ab6e41939543b49c29\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 640, \"y\": 85, \"width\": 630, \"height\": 170, \"z\": 100, \"tabOrder\": 100}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 240, \"width\": 300, \"height\": 150, \"z\": 100, \"tabOrder\": 100}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Pillar 2: Ghost Subscription Audit\\n\", \"textStyle\": {\"fontFamily\": \"Segoe UI Semibold\", \"fontSize\": \"14pt\", \"fontWeight\": \"bold\", \"color\": \"#F8FAFC\"}}, {\"value\": \"Action: Run an immediate credit card audit. Cancel dormant gym memberships, obsolete course platforms, and redundant cloud storage.\\n\\nProjected Household Savings: ~$16,100 / year\\nImplementation Ease: High (One-time cancellation cycle)\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"color\": \"#94A3B8\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 265,
+          "z": 100,
+          "width": 620,
+          "height": 170,
+          "config": "{\"name\": \"c0a80759cb854fe5ba08\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 265, \"width\": 620, \"height\": 170, \"z\": 100, \"tabOrder\": 100}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 400, \"width\": 300, \"height\": 150, \"z\": 100, \"tabOrder\": 100}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Pillar 3: Curb the Delivery Drain\\n\", \"textStyle\": {\"fontFamily\": \"Segoe UI Semibold\", \"fontSize\": \"14pt\", \"fontWeight\": \"bold\", \"color\": \"#F8FAFC\"}}, {\"value\": \"Action: Implement the '50% Takeout Rule'\\u2014cap delivery orders at 2 per month and replace convenience coffee runs with office brewing.\\n\\nProjected Household Savings: ~$25,590 / year\\nImplementation Ease: Moderate (Behavioral habit shift)\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"color\": \"#94A3B8\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 640,
+          "y": 265,
+          "z": 100,
+          "width": 630,
+          "height": 170,
+          "config": "{\"name\": \"0feb453065584fc8b324\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 640, \"y\": 265, \"width\": 630, \"height\": 170, \"z\": 100, \"tabOrder\": 100}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 560, \"width\": 300, \"height\": 150, \"z\": 100, \"tabOrder\": 100}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Pillar 4: Lock Down Silent Creep\\n\", \"textStyle\": {\"fontFamily\": \"Segoe UI Semibold\", \"fontSize\": \"14pt\", \"fontWeight\": \"bold\", \"color\": \"#F8FAFC\"}}, {\"value\": \"Action: Enforce transaction memo logging and configure automated bank push notifications for unclassified or micro-transactions under $50.\\n\\nProjected Household Savings: ~$25,870 / year\\nImplementation Ease: Moderate (Process automation)\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"color\": \"#94A3B8\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 445,
+          "z": 200,
+          "width": 620,
+          "height": 260,
+          "config": "{\"name\": \"07cd0b48818d412ab624\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 445, \"width\": 620, \"height\": 260, \"z\": 200, \"tabOrder\": 200}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 720, \"width\": 300, \"height\": 130, \"z\": 200, \"tabOrder\": 200}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"budgetwise_finance_dataset.Total Leak\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Total Leak\"}, \"Name\": \"budgetwise_finance_dataset.Total Leak\", \"NativeReferenceName\": \"Total Leak\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Total Leak\"}}}]}, \"drillFilterOtherVisuals\": true, \"hasDefaultSort\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#F8FAFC\"}}, \"labelPrecision\": 0}}], \"categoryLabels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": \"#94A3B8\"}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"b\", \"Entity\": \"budgetwise_finance_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"b\"}}, \"Property\": \"Total Leak\"}, \"Name\": \"budgetwise_finance_dataset.Total Leak\", \"NativeReferenceName\": \"Total Leak\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"projectionOrdering\": {\"Data\": [0]}, \"queryMetadata\": {\"Select\": [{\"Restatement\": \"TOTAL ANNUAL RECOVERABLE WEALTH\", \"Name\": \"budgetwise_finance_dataset.Total Leak\", \"Type\": 3, \"Format\": \"$#,##0\"}]}, \"visualElements\": [{\"DataRoles\": [{\"Name\": \"Data\", \"Projection\": 0, \"isActive\": false}]}], \"selects\": [{\"displayName\": \"TOTAL ANNUAL RECOVERABLE WEALTH\", \"format\": \"$#,##0\", \"queryName\": \"budgetwise_finance_dataset.Total Leak\", \"roles\": {\"Data\": true}, \"type\": {\"category\": null, \"underlyingType\": 260}, \"expr\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"budgetwise_finance_dataset\"}}, \"Property\": \"Total Leak\"}}}]}"
+        },
+        {
+          "x": 640,
+          "y": 445,
+          "z": 100,
+          "width": 630,
+          "height": 260,
+          "config": "{\"name\": \"7f52445668a1430cac7b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 640, \"y\": 445, \"width\": 630, \"height\": 260, \"z\": 100, \"tabOrder\": 100}}, {\"id\": 1, \"position\": {\"x\": 10, \"y\": 860, \"width\": 300, \"height\": 180, \"z\": 100, \"tabOrder\": 100}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Executive Execution Roadmap\\n\", \"textStyle\": {\"fontFamily\": \"Segoe UI Semibold\", \"fontSize\": \"14pt\", \"fontWeight\": \"bold\", \"color\": \"#F8FAFC\"}}, {\"value\": \"1. Day 1-7: Freeze and audit recurring digital subscriptions.\\n2. Day 8-14: Transition to meal planning to eliminate delivery surge.\\n3. Day 15-30: Automate weekly spending cap alerts.\\n\\nTotal Potential Cohort Capital Recaptured: $52,067,057 ($47,000+ benchmark per target household).\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"color\": \"#94A3B8\"}}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ]
+    }
+  ],
+  "config": "{\"version\": \"5.73\", \"themeCollection\": {\"baseTheme\": {\"name\": \"CY26SU05\", \"type\": 2, \"version\": {\"visual\": \"2.9.0\", \"report\": \"3.3.0\", \"page\": \"2.3.1\"}}}, \"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true}",
+  "layoutOptimization": 0
+}

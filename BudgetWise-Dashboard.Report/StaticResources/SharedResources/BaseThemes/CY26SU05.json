@@ -1,0 +1,79 @@
+{
+  "name": "BudgetWiseDarkTheme",
+  "dataColors": [
+    "#EF4444",
+    "#F59E0B",
+    "#8B5CF6",
+    "#EC4899",
+    "#10B981",
+    "#38BDF8",
+    "#6366F1",
+    "#14B8A6"
+  ],
+  "background": "#0B1120",
+  "foreground": "#F8FAFC",
+  "tableAccent": "#38BDF8",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#1E293B"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "color": {
+              "solid": {
+                "color": "#334155"
+              }
+            },
+            "radius": 8
+          }
+        ],
+        "dropShadow": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#000000"
+              }
+            },
+            "position": "Outer",
+            "preset": "BottomRight"
+          }
+        ],
+        "title": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#F8FAFC"
+              }
+            },
+            "fontSize": 12,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#0B1120"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}
